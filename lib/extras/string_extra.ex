@@ -48,9 +48,12 @@ defmodule String.Extra do
 
   @doc """
   SHA1 hash
+
   ## Example:
-  iex> String.Extra.sha1("hello world")
-  "Kq5sNclPz7QV2-lfQIuc6R7oRu0="
+
+      iex> String.Extra.sha1("hello world")
+      "Kq5sNclPz7QV2-lfQIuc6R7oRu0="
+
   """
   def sha1(string) do
     :sha

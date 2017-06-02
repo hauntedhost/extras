@@ -2,21 +2,30 @@ defmodule Kernel.Extra do
 
   @doc """
   Returns true if value is nil, a string with only whitespace, or an empty array
+
   ## Examples:
-  iex> Kernel.Extra.blank?(nil)
-  true
-  iex> Kernel.Extra.blank?("")
-  true
-  iex> Kernel.Extra.blank?("   ")
-  true
-  iex> Kernel.Extra.blank?([])
-  true
-  iex> Kernel.Extra.blank?("   .")
-  false
-  iex> Kernel.Extra.blank?([1])
-  false
-  iex> Kernel.Extra.blank?(false)
-  false
+
+      iex> Kernel.Extra.blank?(nil)
+      true
+
+      iex> Kernel.Extra.blank?("")
+      true
+
+      iex> Kernel.Extra.blank?("   ")
+      true
+
+      iex> Kernel.Extra.blank?([])
+      true
+
+      iex> Kernel.Extra.blank?("   .")
+      false
+
+      iex> Kernel.Extra.blank?([1])
+      false
+
+      iex> Kernel.Extra.blank?(false)
+      false
+
   """
   def blank?(value) when is_nil(value) do
     true

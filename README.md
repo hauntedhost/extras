@@ -6,8 +6,7 @@ Tiny, tested, namespaced helper functions for Elixir.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `extras` to your list of dependencies in `mix.exs`:
+Add `extras` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
