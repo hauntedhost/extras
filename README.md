@@ -34,4 +34,4 @@ Please feel free to submit PRs with your favorite, tiny, tested helper functions
 
 ## License
 
-Extras is released under the MIT License.
+Extras is released under the [MIT License](/LICENSE.md).
