@@ -2,12 +2,16 @@ defmodule Extras.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :extras,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :extras,
+      elixir: "~> 1.4",
+      version: "0.1.0",
+      description: "Tiny, tested, namespaced helper functions",
+      deps: deps(),
+      package: package(),
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+    ]
   end
 
   # Configuration for the OTP application
@@ -15,7 +19,11 @@ defmodule Extras.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger]]
+    [
+      extra_applications: [
+        :logger,
+      ],
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +36,19 @@ defmodule Extras.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
+      {:plug, "~> 1.3", optional: true},
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Sean Omlor"],
+      licenses: ["MIT"],
+      links: %{
+        "Github" => "https://github.com/somlor/extras"
+      }
+    ]
   end
 end
