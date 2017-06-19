@@ -9,7 +9,7 @@ defmodule Extras.Mixfile do
     [
       app: :extras,
       elixir: "~> 1.4",
-      version: "0.1.1",
+      version: "0.1.2",
       description: @description,
       deps: deps(),
       package: package(),
